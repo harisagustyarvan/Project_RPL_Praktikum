@@ -1,0 +1,32 @@
+syntax uas SOL.
+Telnet :
+1. chkconfig telnet on.
+2. /etc/init.d/xinetd start.
+3. chkconfig xinted on.
+4. /etc/init.d/xinetd restart.
+5. untuk pengecekan telnet [ip address yang sudah di telnet].
+
+samba :
+1. yast -> cari software management "samba" -> install semua yang berhubungan dengan samba.
+2. mkdir [nama direktori].
+3. chmod 777 [nama direktori yang sudah dibuat].
+4. vim /etc/samba/smb.conf.
+	-> [nama folder]
+	-> path=/[letak folder]
+	-> guest ok=yes
+	-> writeable=yes
+	-> browseable=yes
+	-> create mode=0770
+	-> directory mode=0770
+5. service smb restart / start.
+6. chkconfig smb on.
+7. chkconfig nmb on.
+8. lihat di pc client.
+
+vnc :
+1. vncserver -> masukkan password (8 huruf/angka).
+2. vncviewer [ip yang ingin diremote].
+
+ssh :
+1. ssh [ip yang ingin diremote].
+2. login dengan password 12345(arif) dan qwerty(server2)
